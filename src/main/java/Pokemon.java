@@ -56,6 +56,24 @@ public class Pokemon {
     Dice d20;
 
     /**
+     * THis will create a custom built pokemon, different from the default pokemon.
+     * @param nam the name of the pokemon.
+     * @param hp the number of points put in hp.
+     * @param attack the number of points put into attack.
+     * @param defense the number of points put into defense.
+     * @return returns the newly built custom pokemon.
+     */
+    public Pokemon(final String nam, final int hp, final int attack, final int defense) {
+        final int d6num = 6;
+        final int d20num = 20;
+        this.d6 = new Dice(d6num);
+        this.d20 = new Dice(d20num);
+        this.name = nam;
+        this.hitPoints = hp;
+        this.attackLevel = attack;
+        this.defenseLevel = defense;
+    }
+    /**
      * Create a new Pokemon with default values.
      * <p>
      * Constructs a new Pokemon with a 6-sided die, 20-sided die, 0 hit points, attack level of 0,
